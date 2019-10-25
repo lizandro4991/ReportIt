@@ -21,10 +21,9 @@ namespace ReportIt.View
         {
             string user = EntUsuario.Text;
             string pass = EntPass.Text;
-            Navigation.PushAsync(new AdministracionPage());
             if (user == "Admin" && pass == "Admin")
             {
-                
+                Navigation.PushAsync(new AdministracionPage());
             }
             else
             {

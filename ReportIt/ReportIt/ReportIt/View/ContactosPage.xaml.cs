@@ -19,7 +19,7 @@ namespace ReportIt.View
 
         private async void BtnPolicia_Clicked(object sender, EventArgs e)
         {
-            var result = await DisplayAlert("Actualizar", "Seguro Desea Llamar", "Ok", "Cancel");
+            var result = await DisplayAlert("Info", "Seguro Desea Llamar", "Ok", "Cancel");
             // since we are using async, we should specify the DisplayAlert as awaiting.
             if (result == true) // if it's equal to Ok
             {
@@ -42,7 +42,7 @@ namespace ReportIt.View
 
         private async void Btnisdemu_Clicked(object sender, EventArgs e)
         {
-            var result = await DisplayAlert("Actualizar", "Seguro Desea Llamar", "Ok", "Cancel");
+            var result = await DisplayAlert("Info", "Seguro Desea Llamar", "Ok", "Cancel");
             if (result == true) // if it's equal to Ok
             {
                 try
@@ -63,7 +63,7 @@ namespace ReportIt.View
 
         private async void BtnIsna_Clicked(object sender, EventArgs e)
         {
-            var result = await DisplayAlert("Actualizar", "Seguro Desea Llamar", "Ok", "Cancel");
+            var result = await DisplayAlert("Info", "Seguro Desea Llamar", "Ok", "Cancel");
             if (result == true) // if it's equal to Ok
             {
                 try
