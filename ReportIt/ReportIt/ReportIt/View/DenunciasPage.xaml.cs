@@ -15,6 +15,32 @@ namespace ReportIt.View
         public DenunciasPage()
         {
             InitializeComponent();
+            BindingContext = new Model.DenunciaModel();
+        }
+
+        private async void BtnDenunciar_Clicked(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(TxtNombre.Text) || String.IsNullOrWhiteSpace(TxtDireccion.Text) || String.IsNullOrWhiteSpace(TxtTipoViolencia.Text) || String.IsNullOrWhiteSpace(TxtDescripcion.Text))
+            {
+                await DisplayAlert("Info", "Llenar Todos Los Campos", "Ok");
+            }
+            else
+            {
+                var ListaDenuncias = (Model.DenunciaModel)BindingContext;
+                //Insertar un Registro.
+                var Resultado = await App.DataBase.InsertarDenuncia(ListaDenuncias);
+
+                if (Resultado == 1)
+                {
+                    await App.Current.MainPage.DisplayAlert("Info", $"Registro guardado con Exito", "OK");
+                    await Navigation.PopAsync();
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Info", "Error al Guardar", "OK");
+                    await Navigation.PopAsync();
+                }
+            }
         }
     }
 }

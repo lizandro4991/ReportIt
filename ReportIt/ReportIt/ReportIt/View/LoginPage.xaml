@@ -5,11 +5,61 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ReportIt.View.LoginPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelBlack" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="labelBlack2" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="EntryLogIn" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="PlaceholderColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+            </Style>
+            <Style x:Key="ButtonLogIn" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#FF5990"></Setter>
+                <Setter Property="TextColor" Value="#FFFFFF"></Setter>
+                <Setter Property="BorderRadius" Value="20"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="FontSize" Value="Small"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView BackgroundColor="#FFFFFF">
+            <StackLayout BackgroundColor="#FFFFFF" Padding="0,30" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+                    <Image Source="ReportitLogo.png" WidthRequest="150" HeightRequest="150" />
+                    <Label Text="Log In" Style="{StaticResource labelBlack}"/>
+                </StackLayout>
+
+                <Frame Padding="20" BackgroundColor="#33578F" CornerRadius="15" BorderColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="20,0,20,0">
+                    <StackLayout>
+                        <StackLayout  BackgroundColor="Transparent" Orientation="Horizontal" HorizontalOptions="Fill">
+                            <Image Source="avatar.png" WidthRequest="20"/>
+                            <Entry Placeholder="Usuario" x:Name="EntUsuario" Style="{StaticResource EntryLogIn}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Transparent"  HorizontalOptions="Fill">
+                            <Image Source="passicon.png" WidthRequest="20"/>
+                            <Entry Placeholder="Password" x:Name="EntPass" IsPassword="True" Style="{StaticResource EntryLogIn}"/>
+                        </StackLayout>
+                        <Button Text="Ingresar" x:Name="BtnIngresar" Clicked="BtnIngresar_Clicked" Style="{StaticResource ButtonLogIn}" />
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

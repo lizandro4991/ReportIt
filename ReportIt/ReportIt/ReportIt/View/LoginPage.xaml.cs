@@ -16,5 +16,20 @@ namespace ReportIt.View
         {
             InitializeComponent();
         }
+
+        private void BtnIngresar_Clicked(object sender, EventArgs e)
+        {
+            string user = EntUsuario.Text;
+            string pass = EntPass.Text;
+            if (user == "a" && pass == "a")
+            {
+                Navigation.PushAsync(new AdministracionPage());
+            }
+            else
+            {
+                DisplayAlert("Error", "Credenciales Invalidas", "Ok");
+            }
+        }
+
     }
 }

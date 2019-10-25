@@ -5,11 +5,61 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ReportIt.View.DenunciasPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelWhite" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="EntryConfig" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="PlaceholderColor" Value="LightGray"/>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="HorizontalOptions" Value="Fill"></Setter>
+            </Style>
+            <Style x:Key="EditorConfig" TargetType="Editor">
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="PlaceholderColor" Value="LightGray"/>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="HorizontalOptions" Value="Fill"></Setter>
+            </Style>
+            <Style x:Key="ButtonConfig" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#FF5990"></Setter>
+                <Setter Property="TextColor" Value="#FFFFFF"></Setter>
+                <Setter Property="BorderRadius" Value="20"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="FontSize" Value="Small"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView BackgroundColor="#FFFFFF">
+            <StackLayout Padding="20">
+                <Frame BackgroundColor="#33578F" CornerRadius="20" >
+                    <StackLayout Padding="20">
+                        <Label Text="Nombre o Descripcion del agresor." Style="{StaticResource labelWhite}"/>
+                        <Entry Placeholder="Ej: Juan" Style="{StaticResource EntryConfig}" Text="{Binding Nombre}" x:Name="TxtNombre"/>
+
+                        <Label Text="Tipo de Violencia:" Style="{StaticResource labelWhite}"/>
+                        <Entry Placeholder="Ej: Fisica, Piscologica" Style="{StaticResource EntryConfig}" Text="{Binding TipoViolencia}" x:Name="TxtTipoViolencia"/>
+
+                        <Label Text="Direccion:" Style="{StaticResource labelWhite}"/>
+                        <Entry Placeholder="Ej: San Miguel" Style="{StaticResource EntryConfig}" Text="{Binding Direccion}" x:Name="TxtDireccion"/>
+
+                        <Label Text="Fecha:" Style="{StaticResource labelWhite}"/>
+                        <DatePicker Format="d" TextColor="White" Date="{Binding Fecha}" MaximumDate="2021/01/01" MinimumDate="2000/01/01" />
+
+                        <Label Text="Descripcion:" Style="{StaticResource labelWhite}"/>
+                        <Editor Placeholder="Descripcion del Caso" Style="{StaticResource EditorConfig }" Text="{Binding Descripcion}" x:Name="TxtDescripcion"/>
+
+                        <Button Text="Realizar Denuncia"  Style="{StaticResource ButtonConfig}" x:Name="BtnDenunciar" Clicked="BtnDenunciar_Clicked"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

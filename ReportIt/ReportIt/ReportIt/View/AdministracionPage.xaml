@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ReportIt.View.AdministracionPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salir" Clicked="OnContactAdded">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#FF5990" >
+                <Label Text="Id" VerticalOptions="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="Nombre" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="Tipo De Violencia" VerticalOptions="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
+            </StackLayout>
+            <ScrollView>
+                <ListView ItemSelected="ListViewItem_ItemSelected" x:Name="ListViewItem"  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#33578F" >
+                                    <Label Text="{Binding Id}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" TextColor="White"/>
+                                    <Label Text="{Binding Nombre}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                                    <Label Text="{Binding TipoViolencia}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" TextColor="White"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

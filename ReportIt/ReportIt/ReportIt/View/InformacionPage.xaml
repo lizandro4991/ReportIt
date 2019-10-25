@@ -5,11 +5,59 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ReportIt.View.InformacionPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelBlack" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            </Style>
+            <Style x:Key="labelText" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="FontAttributes" Value=""/>
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            </Style>
+            <Style x:Key="ButtonConfig" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#FF5990"></Setter>
+                <Setter Property="TextColor" Value="#FFFFFF"></Setter>
+                <Setter Property="BorderRadius" Value="20"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="FontSize" Value="Small"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView BackgroundColor="#FFFFFF">
+            <StackLayout Padding="20">
+                <Frame BackgroundColor="#33578F" CornerRadius="20">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Style="{StaticResource labelBlack}" Text="LEY CONTRA VIOLENCIA INTRAFAMILIAR "/>
+                        <Label Style="{StaticResource labelText}" Text="Art. 3.- Constituye violencia intrafamiliar, cualquier acción u omisión, directa o indirecta que cause daño, sufrimiento físico, sexual, psicológico o muerte a las personas integrantes de una familia." />
+                        <Label Style="{StaticResource labelBlack}" Text="Son formas de violencia intrafamiliar: a) Violencia psicológica. b) Violencia física. c) Violencia sexual. d) VIOLENCIA PATRIMONIAL."/>
+                        <Button Style="{StaticResource ButtonConfig}" Text="Leer Mas..." x:Name="BtnleerIntrafamiliar" Clicked="BtnleerIntrafamiliar_Clicked"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#33578F" CornerRadius="20">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Style="{StaticResource labelBlack}" Text=" CÓDIGO PENAL"/>
+                        <Label Style="{StaticResource labelText}" Text="Que con el objeto de orientar nuestra normativa penal dentro de una concepción garantista, de alta efectividad para restringir la violencia social y con una amplia proyección de función punitiva no selectivista, resulta conveniente que se emita un nuevo Código Penal, que sin apartarse de nuestros patrones culturales, se constituya en un instrumento moderno, dinámico y eficaz para combatir la delincuencia." />
+                        <Button Style="{StaticResource ButtonConfig}" Text="Leer Mas..." x:Name="BtnleerCodigoPenal" Clicked="BtnleerCodigoPenal_Clicked"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#33578F" CornerRadius="20">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Style="{StaticResource labelBlack}" Text="LEY DEPROTECCIÓNINTEGRAL DELANIÑEZY ADOLESCENCIA"/>
+                        <Label Style="{StaticResource labelText}" Text="Artículo38.-Protecciónfrentealmaltrato"/>
+                        <Label Style="{StaticResource labelBlack}" Text="ElEstadotiene la obligaciónde establecerpolíticaspúblicasyprogramaspara laprevención,atenciónyerradicacióndelmaltratoyelabandonofísicoyemocionalde lasniñas, niñosyadolescentes. Se entiende pormaltrato, toda acciónuomisiónque provoque opueda provocardolor, sufrimientoodañoa la integridadosaludfísica, psicológica, moralosexualdeuna niña, niñooadolescente, porpartede cualquierpersona, incluidossuspadres,madresuotrosparientes,educadoresypersonasa cargodesucuido, cualesquiera que seanlosmediosutilizados."/>
+                        <Button Style="{StaticResource ButtonConfig}" Text="Leer Mas..." x:Name="BtnleerLepina" Clicked="BtnleerLepina_Clicked"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
