@@ -12,19 +12,21 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#FF5990" >
-                <Label Text="Id" VerticalOptions="Center" HorizontalOptions="StartAndExpand" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
-                <Label Text="Nombre" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
-                <Label Text="Tipo De Violencia" VerticalOptions="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
-            </StackLayout>
+            <Frame BackgroundColor="#C26F32" CornerRadius="5">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#C26F32" VerticalOptions="CenterAndExpand">
+                    <Label Text="Nombre" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" TextColor="White" FontSize="Small" FontAttributes="Bold"/>
+                    <Label Text="Direccion" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="Small" FontAttributes="Bold"/>
+                    <Label Text="Tipo De Violencia" VerticalOptions="Center" HorizontalOptions="End" TextColor="White" FontSize="Small" FontAttributes="Bold"/>
+                </StackLayout>
+            </Frame>
             <ScrollView>
                 <ListView ItemSelected="ListViewItem_ItemSelected" x:Name="ListViewItem"  >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Margin="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#33578F" >
-                                    <Label Text="{Binding Id}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" TextColor="White"/>
-                                    <Label Text="{Binding Nombre}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                                <StackLayout Padding="10,0,10,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#33578F" >
+                                    <Label Text="{Binding Nombre}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" TextColor="White"/>
+                                    <Label Text="{Binding Direccion}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White"/>
                                     <Label Text="{Binding TipoViolencia}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" TextColor="White"/>
                                 </StackLayout>
                             </ViewCell>

@@ -47,7 +47,7 @@
                 <Frame Padding="20" BackgroundColor="#33578F" CornerRadius="15" BorderColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="20,0,20,0">
                     <StackLayout>
                         <StackLayout  BackgroundColor="Transparent" Orientation="Horizontal" HorizontalOptions="Fill">
-                            <Image Source="avatar.png" WidthRequest="20"/>
+                            <Image Source="usericon.png" WidthRequest="20"/>
                             <Entry Placeholder="Usuario" x:Name="EntUsuario" Style="{StaticResource EntryLogIn}"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" BackgroundColor="Transparent"  HorizontalOptions="Fill">

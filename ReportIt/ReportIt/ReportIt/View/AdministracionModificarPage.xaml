@@ -36,7 +36,7 @@
                         <Entry Style="{StaticResource EntryConfig}" Text="{Binding Nombre}"/>
                         <Entry Style="{StaticResource EntryConfig}" Text="{Binding TipoViolencia}"/>
                         <Entry Style="{StaticResource EntryConfig}" Text="{Binding Direccion}"/>
-                        <DatePicker Format="dd/mm/yyyy" TextColor="White" Date="{Binding Fecha}" MaximumDate="2021/01/01" MinimumDate="2000/01/01"/>
+                        <DatePicker TextColor="White" Date="{Binding Fecha}" MaximumDate="2021/01/01" MinimumDate="2000/01/01"/>
                         <Editor Style="{StaticResource EditorConfig }" Text="{Binding Descripcion}"/>
                         <StackLayout Orientation="Horizontal">
                             <Button Text="Actualizar"  Style="{StaticResource ButtonConfig}" x:Name="BtnActualizar" Clicked="BtnActualizar_Clicked"/>
