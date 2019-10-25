@@ -10,7 +10,7 @@
             <Style x:Key="ImgButton" TargetType="ImageButton">
                 <Setter Property="BackgroundColor" Value="#33578F"></Setter>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
-                <Setter Property="Aspect" Value="AspectFill"/>
+                <Setter Property="Aspect" Value="AspectFill"/> 
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
                 <Setter Property="CornerRadius" Value="10"/>
 
@@ -28,7 +28,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="FillAndExpand">
             <StackLayout Padding="0" BackgroundColor="#33578F">
-                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="#33578F" HeightRequest="70">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="#33578F" HeightRequest="30">
                 </StackLayout>
                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="#33578F">
                     <Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" >
@@ -44,6 +44,6 @@
                     <ImageButton Source="IMG4.jpg" x:Name="ibtnAdmin" Clicked="ibtnAdmin_Clicked"  Style="{StaticResource ImgButton}"/>
                 </StackLayout>
             </ScrollView>
-        </StackLayout>
+        </StackLayout>             
     </ContentPage.Content>
 </ContentPage>
