@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ReportIt.View.ContactosPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelBlack" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="labelBlack2" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="ButtonLlamar" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#FF5990"></Setter>
+                <Setter Property="TextColor" Value="#FFFFFF"></Setter>
+                <Setter Property="BorderRadius" Value="20"></Setter>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="FontSize" Value="Small"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#FFFFFF">
+            <StackLayout Padding="20">
+                <Frame BackgroundColor="#33578F" CornerRadius="20">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                        <Image Source="PNClogo.jpg" WidthRequest="70" HeightRequest="70"/>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label Text="PNC" Style="{StaticResource labelBlack2}"/>
+                            <Label Text="Policia Nacional Civil" Style="{StaticResource labelBlack}"/>
+                            <Button Text="Llamar" Style="{StaticResource ButtonLlamar}" x:Name="BtnPolicia" Clicked="BtnPolicia_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#33578F" CornerRadius="20">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                        <Image Source="isdemu.png" WidthRequest="70" HeightRequest="70"/>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label Text="ISDEMU" Style="{StaticResource labelBlack2}"/>
+                            <Label Text="Instituto Salvadoreño para el Desarrollo de la Mujer" Style="{StaticResource labelBlack}"/>
+                            <Button Text="Llamar" Style="{StaticResource ButtonLlamar}" x:Name="Btnisdemu" Clicked="Btnisdemu_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#33578F" CornerRadius="20">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                        <Image Source="isna.png" WidthRequest="70" HeightRequest="70"/>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label Text="ISNA" Style="{StaticResource labelBlack2}"/>
+                            <Label Text="Instituto Salvadoreño Para el Desarrollo Integral de la Niñez y la Adolescencia" Style="{StaticResource labelBlack}"/>
+                            <Button Text="Llamar" Style="{StaticResource ButtonLlamar}" x:Name="BtnIsna" Clicked="BtnIsna_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

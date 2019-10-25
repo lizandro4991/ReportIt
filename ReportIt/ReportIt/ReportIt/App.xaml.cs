@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ReportIt.Model;
+using ReportIt.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,11 +8,14 @@ namespace ReportIt
 {
     public partial class App : Application
     {
+        public static DenunciaProcesos DataBase = new DenunciaProcesos();
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new PrincipalPage());
+            var navigationPage = App.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromHex("#33578F");
         }
 
         protected override void OnStart()

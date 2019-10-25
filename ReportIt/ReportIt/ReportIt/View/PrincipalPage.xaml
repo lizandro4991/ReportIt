@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ReportIt.View.PrincipalPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ImgButton" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="#33578F"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="Aspect" Value="AspectFill"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="CornerRadius" Value="10"/>
+
+            </Style>
+            <Style x:Key="LabelBienbenidos" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="#FF5990"></Setter>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="FillAndExpand">
+            <StackLayout Padding="0" BackgroundColor="#33578F">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="#33578F" HeightRequest="70">
+                </StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="#33578F">
+                    <Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Image Source="ReportitLogo.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <ImageButton Source="IMG1.jpg" x:Name="ibtnDenuncia" Clicked="ibtnDenuncia_Clicked"  Style="{StaticResource ImgButton}"/>
+                    <ImageButton Source="IMG3.jpg" x:Name="ibtnContactos" Clicked="ibtnContactos_Clicked"  Style="{StaticResource ImgButton}"/>
+                    <ImageButton Source="IMG2.jpg" x:Name="ibtnInfo" Clicked="ibtnInfo_Clicked"  Style="{StaticResource ImgButton}"/>
+                    <ImageButton Source="IMG4.jpg" x:Name="ibtnAdmin" Clicked="ibtnAdmin_Clicked"  Style="{StaticResource ImgButton}"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
